@@ -12,6 +12,7 @@ This is an amalgamation of [LilStrudel](https://github.com/Lil-Strudel/.dotfiles
 - [Tokyo-Night](https://github.com/folke/tokyonight.nvim)
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+- [Obsidian.nvim](https://github.com/epwalsh/obsidian.nvim)
 
 ## Remaps
 ``` lua

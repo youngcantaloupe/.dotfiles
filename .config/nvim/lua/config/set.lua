@@ -34,3 +34,6 @@ vim.opt.scrolloff = 8
 
 -- Sync clipboard between OS and Neovim
 vim.opt.clipboard = 'unnamedplus'
+
+-- Conceallevel for Obsidian interactive keys
+vim.opt.conceallevel = 1
