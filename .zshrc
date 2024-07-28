@@ -9,9 +9,8 @@ plug "zsh-users/zsh-completions"
 # Custom plugins
 plug "$HOME/.config/zsh/starship.zsh"
 plug "$HOME/.config/zsh/aliases.zsh"
+plug "$HOME/.config/zsh/spicetify.zsh"
 
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
-
-
