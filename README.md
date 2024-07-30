@@ -63,8 +63,6 @@ Using rofi theme repo from [adi1090x](https://github.com/adi1090x/rofi)
 
 **To do:**
 - Polybar
-	- fix ram
-	- fix battery prefix
 	- use nerdfont for application icons for workspaces
 - i3
   	- auto launch applications to specific workspaces
@@ -72,5 +70,3 @@ Using rofi theme repo from [adi1090x](https://github.com/adi1090x/rofi)
 		- firefox -> 2
 		- obsidian -> 3
 		- spotify -> 10
-- Learn how to manage wireless networks in terminal
-- Setup NordVPN... Integrate with polybar?
