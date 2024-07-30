@@ -62,7 +62,15 @@ git clone --depth=1 https://github.com/adi1090x/rofi.git
 Using rofi theme repo from [adi1090x](https://github.com/adi1090x/rofi)
 
 **To do:**
-- Install pywal and network-dmenu 
-- Use [adi1090x](https://github.com/adi1090x/polybar-themes?tab=readme-ov-file) 's polybar theme repo.
-	- pywal - adjusts polybar colors to match background
-	- network-dmenu - adds widget functionality to polybar.
+- Polybar
+	- fix ram
+	- fix battery prefix
+	- use nerdfont for application icons for workspaces
+- i3
+  	- auto launch applications to specific workspaces
+		- term -> 1 
+		- firefox -> 2
+		- obsidian -> 3
+		- spotify -> 10
+- Learn how to manage wireless networks in terminal
+- Setup NordVPN... Integrate with polybar?
