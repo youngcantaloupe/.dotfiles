@@ -1,5 +1,5 @@
 [directory]
-style = "fg:#57b799"
+style = "fg:#65bfb1"
 format = "[ $path ]($style)"
 truncation_length = 2
 truncation_symbol = "…/"
