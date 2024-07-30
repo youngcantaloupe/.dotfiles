@@ -80,8 +80,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Use brightnessctl for brightness controls
-bindsym XF86MonBrightnessUp exec brightnessctl set -10
-bindsym XF86MonBrightnessDown exec brightnessctl set +10
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 # change focus
 bindsym $mod+h focus left
