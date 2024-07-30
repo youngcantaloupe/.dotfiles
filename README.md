@@ -55,3 +55,14 @@ zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 - tmux.conf requires this plugin manager
+- ### ROFI
+```
+git clone --depth=1 https://github.com/adi1090x/rofi.git
+```
+Using rofi theme repo from [adi1090x](https://github.com/adi1090x/rofi)
+
+**To do:**
+- Install pywal and network-dmenu 
+- Use [adi1090x](https://github.com/adi1090x/polybar-themes?tab=readme-ov-file) 's polybar theme repo.
+	- pywal - adjusts polybar colors to match background
+	- network-dmenu - adds widget functionality to polybar.
