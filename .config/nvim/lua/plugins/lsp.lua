@@ -36,10 +36,11 @@ return {
                 cmp.setup({
                     formatting = lsp_zero.cmp_format({details = true}),
                     mapping = cmp.mapping.preset.insert({
-                        ['<C-n>'] = cmp.mapping.select_next_item(),
-                        ['<C-p>'] = cmp.mapping.select_prev_item(),
-                        ['<C-y>'] = cmp.mapping.confirm { select = true },
                         ['<C-Space>'] = cmp.mapping.complete(),
+                        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+                        ['<C-d>'] = cmp.mapping.scroll_docs(4),
+                        ['<C-f>'] = cmp_action.luasnip_jump_forward(),
+                        ['<C-b>'] = cmp_action.luasnip_jump_backward(),
                     }),
                     snippet = {
                         expand = function(args)
@@ -64,8 +65,8 @@ return {
                 local lsp_zero = require('lsp-zero')
                 lsp_zero.extend_lspconfig()
 
-                --- if you want to know more about lsp-zero and mason.nvim:
-                --- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
+                --- if you want to know more about lsp-zero and mason.nvim
+                --- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
                 lsp_zero.on_attach(function(client, bufnr)
                     -- see :help lsp-zero-keybindings
                     -- to learn the available actions
@@ -79,13 +80,6 @@ return {
                         -- it applies to every language server without a "custom handler"
                         function(server_name)
                             require('lspconfig')[server_name].setup({})
-                        end,
-
-                        -- this is the "custom handler" for `lua_ls`
-                        lua_ls = function()
-                            -- (Optional) Configure lua language server for neovim
-                            local lua_opts = lsp_zero.nvim_lua_ls()
-                            require('lspconfig').lua_ls.setup(lua_opts)
                         end,
                     }
                 })
