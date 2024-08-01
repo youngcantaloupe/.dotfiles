@@ -60,13 +60,23 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone --depth=1 https://github.com/adi1090x/rofi.git
 ```
 Using rofi theme repo from [adi1090x](https://github.com/adi1090x/rofi)
+    - type-1, style-6
+    - using tokyonight theme (/rofi/colors/tokyonight.rasi)
+        - selected: -> #65bfb1 
 
 **To do:**
 - Polybar
 	- use nerdfont for application icons for workspaces
+    - add bluetooth module
+    - dropdown widgets would be nice for wifi, bluetooth, and time -> calendar
+        - i believe wifi can be done with networkmanager-dmenu
 - i3
   	- auto launch applications to specific workspaces
 		- term -> 1 
 		- firefox -> 2
 		- obsidian -> 3
 		- spotify -> 10
+- bluetoothctl or (gnome bluetooth?)
+    - research how to use + polybar integration
+- tmux
+    - Tate - learn managing sessions
