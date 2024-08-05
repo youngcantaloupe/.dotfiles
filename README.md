@@ -76,7 +76,20 @@ Using rofi theme repo from [adi1090x](https://github.com/adi1090x/rofi)
 		- firefox -> 2
 		- obsidian -> 3
 		- spotify -> 10
+    - configure suspend - frozen after lid close
 - bluetoothctl or (gnome bluetooth?)
     - research how to use + polybar integration
 - tmux
     - Tate - learn managing sessions
+- obsidian nvim
+    - learn syntax to get correct formatted output
+    - create inbox - default location for new notes
+    - add color to bold/italics
+    - organize filetree / implement tagging system for easy telescope searches
+    - templates 
+    - still need to implement way to sync vault to Amaterasu
+- neovim
+    - change dir color to green
+    - fix register - clipboard not working for y in i, but works while in v
+
+- system in genearal would be nice if alongside the vault- documents, pictures and music were synced across machines
