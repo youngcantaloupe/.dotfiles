@@ -5,7 +5,7 @@ I use [MesloLGS Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
 ### Packages
 
 ```
-sudo apt install git gh zsh tmux ripgrep yadm eza kitty btop neofetch
+sudo apt install git gh zsh tmux ripgrep yadm eza kitty btop neofetch bat
 ```
 
 ### Neovim
