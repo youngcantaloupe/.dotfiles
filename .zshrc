@@ -11,7 +11,7 @@ plug "$HOME/.config/zsh/starship.zsh"
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/spicetify.zsh"
 plug "$HOME/.config/zsh/history.zsh"
-plug "$HOME/.config/zsh/completions.zsh"
+plug "$HOME/.config/zsh/completion.zsh"
 
 # Load and initialise completion system
 autoload -Uz compinit

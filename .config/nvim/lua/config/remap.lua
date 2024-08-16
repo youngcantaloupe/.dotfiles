@@ -19,3 +19,7 @@ vim.keymap.set("x", "<leader>p", "\"_dp")
 -- Prime's keymap to delete to void register
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
+
+-- Copy to system clipboard +y ty reddit
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
