@@ -4,7 +4,7 @@
 ```
 sudo apt install bat brightnessctl btop curl eza feh fzf gh git i3 kitty neofetch pavucontrol picom polybar ripgrep rofi yadm zsh
 ```
-- glow for ubuntu/debian
+### Glow
 ```
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
@@ -15,21 +15,21 @@ sudo apt update && sudo apt install glow
 ### Fonts (because i always forget)
 I use [MesloLGS Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
 1. Download and extract
-- `mkdir Meslo`
-- `unzip Meslo.zip -d Meslo`
+    - `mkdir Meslo`
+    - `unzip Meslo.zip -d Meslo`
 2. Delete unused fonts, keep:
-- MesloLGSNerdFont
-- MesloLGSNerdFontMono
-- MesloLGSNerdFontPropo
+    - MesloLGSNerdFont
+    - MesloLGSNerdFontMono
+    - MesloLGSNerdFontPropo
 3. Move Meslo to fonts:
-- /usr/share/fonts/ — fonts for all users
-- ~/.local/share/fonts/ — fonts for particular user
+    - /usr/share/fonts/ — fonts for all users
+    - ~/.local/share/fonts/ — fonts for particular user
 4. Good enough for now, kitty.conf sets font
-- When dotfiles have been cloned with yadm, you can see what font is active in kitty with: 
+    - When dotfiles have been cloned with yadm, you can see what font is active in kitty with: 
 ```
 grep -i 'font_family' ~/.config/kitty/kitty.conf
 ```
-# Shell
+### Shell
 1. Change to zsh
 ```
 chsh -s /bin/zsh
@@ -88,14 +88,16 @@ sudo chmod a+wr /usr/share/spotify
 sudo chmod a+wr /usr/share/spotify/Apps -R
 ```
 **NOTE:** could be installed somewhere else, ubuntu installs here though. 
+
 4. Install Spicetify CLI, select `y` to install marketplace
 ```
 curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
 ```
-5. Didn't detect prefs file location?
-- 
-7. run `spicetify` to generate config file
-8. Confirm config is generated and run:
+```
+curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
+```
+5. run `spicetify` to generate config file
+6. Confirm config is generated and run:
 ```
 spicetify backup apply enable-devtools
 ```
@@ -124,7 +126,8 @@ zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 - tmux.conf requires this plugin manager
-- ### ROFI
+
+### ROFI
 ```
 git clone --depth=1 https://github.com/adi1090x/rofi.git
 ```
@@ -132,6 +135,15 @@ Using rofi theme repo from [adi1090x](https://github.com/adi1090x/rofi)
     - type-1, style-6
     - using tokyonight theme (/rofi/colors/tokyonight.rasi)
         - selected: -> #65bfb1 
+### yadm
+1. Now should be set for cloning dotfiles
+```
+yadm clone https://github.com/youngcantaloupe/.dotfiles
+```
+    - May have not updated files that already exist (.zshrc)
+```
+yadm checkout /home/kakashi
+```
 
 **To do:**
 - Polybar
@@ -148,6 +160,9 @@ Using rofi theme repo from [adi1090x](https://github.com/adi1090x/rofi)
     - configure suspend - frozen after lid close
 - bluetoothctl or (gnome bluetooth?)
     - research how to use + polybar integration
+- networkmanager-dmenu
+    - how do i even install??
+    - this should help with the polybar integrations though
 - tmux
     - Tate - learn managing sessions
 - obsidian nvim
@@ -158,7 +173,6 @@ Using rofi theme repo from [adi1090x](https://github.com/adi1090x/rofi)
     - templates 
     - still need to implement way to sync vault to Amaterasu
 - neovim
-    - change dir color to green
-    - fix register - clipboard not working for y in i, but works while in v
+    - undotree
 
 - system in genearal would be nice if alongside the vault- documents, pictures and music were synced across machines
