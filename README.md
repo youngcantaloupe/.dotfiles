@@ -128,6 +128,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 - tmux.conf requires this plugin manager
 
 ### ROFI
+1. Clone adi1090x's themes
 ```
 git clone --depth=1 https://github.com/adi1090x/rofi.git
 ```
@@ -135,6 +136,14 @@ Using rofi theme repo from [adi1090x](https://github.com/adi1090x/rofi)
     - type-1, style-6
     - using tokyonight theme (/rofi/colors/tokyonight.rasi)
         - selected: -> #65bfb1 
+
+2. Generate config.rasi
+```
+rofi -dump-config > ~/.config/rofi/config.rasi
+```
+3. Make sure that `./setup.sh` has x perms and excute `./setup.sh`
+**NOTE:** Either do this before loading into i3, or change the keybinds for dmenu back to the default until this is setup.
+
 ### yadm
 1. Now should be set for cloning dotfiles
 ```
@@ -151,6 +160,10 @@ yadm checkout /home/kakashi
     - add bluetooth module
     - dropdown widgets would be nice for wifi, bluetooth, and time -> calendar
         - i believe wifi can be done with networkmanager-dmenu
+    - conditional module display -> tsukiyomi v. amaterasu
+- picom
+    - conditional refresh rate/vsync -> tsukiyomi v. amaterasu
+
 - i3
   	- auto launch applications to specific workspaces
 		- term -> 1 
