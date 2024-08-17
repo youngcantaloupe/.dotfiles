@@ -1,11 +1,38 @@
 # My dotfiles
 
-I use [MesloLGS Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
-
 ### Packages
-
 ```
-sudo apt install git gh zsh tmux ripgrep yadm eza kitty btop neofetch bat
+sudo apt install bat brightnessctl btop curl eza feh fzf gh git i3 kitty neofetch pavucontrol picom polybar ripgrep rofi yadm zsh
+```
+- glow for ubuntu/debian
+```
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
+echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
+sudo apt update && sudo apt install glow
+```
+
+### Fonts (because i always forget)
+I use [MesloLGS Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
+1. Download and extract
+- `mkdir Meslo`
+- `unzip Meslo.zip -d Meslo`
+2. Delete unused fonts, keep:
+- MesloLGSNerdFont
+- MesloLGSNerdFontMono
+- MesloLGSNerdFontPropo
+3. Move Meslo to fonts:
+- /usr/share/fonts/ — fonts for all users
+- ~/.local/share/fonts/ — fonts for particular user
+4. Good enough for now, kitty.conf sets font
+- When dotfiles have been cloned with yadm, you can see what font is active in kitty with: 
+```
+grep -i 'font_family' ~/.config/kitty/kitty.conf
+```
+# Shell
+1. Change to zsh
+```
+chsh -s /bin/zsh
 ```
 
 ### Neovim
@@ -39,6 +66,40 @@ sudo make CMAKE_BUILD_TYPE=Release
 ```
 sudo make install
 ```
+
+### Obsidian
+1. Install through snap.
+
+### Spotify/ [spicetify](https://spicetify.app/docs/advanced-usage/installation/)
+**NOTE:** Spotify installed through snap cannot be modified. Spicetify will not work.
+1. If installed with snap:
+```
+snap remove spotify
+```
+2. Install spotify using `apt`
+```
+curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
+```
+3. After install with `apt`, add read and write perms:
+```
+sudo chmod a+wr /usr/share/spotify
+sudo chmod a+wr /usr/share/spotify/Apps -R
+```
+**NOTE:** could be installed somewhere else, ubuntu installs here though. 
+4. Install Spicetify CLI, select `y` to install marketplace
+```
+curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+```
+5. Didn't detect prefs file location?
+- 
+7. run `spicetify` to generate config file
+8. Confirm config is generated and run:
+```
+spicetify backup apply enable-devtools
+```
+
 
 ### LazyGit
 ```
