@@ -2,7 +2,7 @@
 
 ### Packages
 ```
-sudo apt install bat brightnessctl btop curl eza feh fzf gh git i3 kitty neofetch pavucontrol picom polybar ripgrep rofi yadm zsh
+sudo apt install bat brightnessctl btop curl eza feh fzf gh git i3 kitty neofetch pavucontrol picom polybar playerctl ripgrep rofi yadm zsh
 ```
 ### Glow
 ```
