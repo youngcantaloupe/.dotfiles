@@ -40,7 +40,7 @@ font pango:MesloLGSMono 8
 #exec --no-startup-id feh --bg-scale ~/Documents/Pictures/Wallpapers/moon.jpg
 
 # Setting resolution and refreshrate for amaterasu
-exec --no-startup-id xrandr --output HDMI-0 --mode 2560x1440 --rate 143.86
+exec --no-startup-id xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 143.86 --output DP-2 --mode 1920x1080 --rate 239.96 --right-of HDMI-0
 
 # Remove titles
 default_border pixel 3
@@ -143,7 +143,7 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
+set $ws9 "9" 
 set $ws10 "10"
 
 # switch to workspace
@@ -158,6 +158,18 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
+# assign workspaces to monitors
+workspace $ws1 output HDMI-0
+workspace $ws2 output HDMI-0
+workspace $ws3 output HDMI-0
+workspace $ws4 output HDMI-0
+workspace $ws5 output HDMI-0
+workspace $ws6 output DP-2
+workspace $ws7 output DP-2
+workspace $ws8 output DP-2
+workspace $ws9 output DP-2
+workspace $ws10 output DP-2
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -171,10 +183,10 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # assign workspaces
-assign [class="kitty"] $ws1
-assign [class="firefox"] $ws2
-assign [class="obsidian"] $ws3
-assign [class="Spotify"] $ws10
+#assign [class="kitty"] $ws1
+#assign [class="firefox"] $ws2
+#assign [class="obsidian"] $ws3
+#assign [class="Spotify"] $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
