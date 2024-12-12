@@ -2,9 +2,10 @@
 
 ### Packages
 ```
-sudo apt install bat brightnessctl btop curl eza feh fzf gh git i3 kitty neofetch pavucontrol picom polybar playerctl ripgrep rofi yadm zsh
+sudo apt install bat brightnessctl btop curl eza feh flameshot fzf gh git i3 kitty neofetch pavucontrol picom polybar playerctl ripgrep rofi yadm zsh
 ```
-### Glow
+### [Glow](https://github.com/charmbracelet/glow)
+Used to render markdown nicely in the terminal
 ```
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
@@ -37,6 +38,8 @@ chsh -s /bin/zsh
 
 ### Neovim
 Tools for installing nvim
+
+**NOTE:** Specific nvim info can be found in `.config/nvim/README.md`
 ```
 sudo apt-get install ninja-build gettext cmake unzip curl build-essential
 ```
@@ -156,7 +159,8 @@ yadm clone https://github.com/youngcantaloupe/.dotfiles
 yadm checkout /home/kakashi
 ```
 
-### Testing out: [Gum](https://github.com/charmbracelet/gum)
+### [Gum](https://github.com/charmbracelet/gum)
+**NOTE:** Used for a few scripts some alias's will not work without
 1. Install
 ```
 sudo mkdir -p /etc/apt/keyrings
@@ -165,38 +169,43 @@ echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *
 sudo apt update && sudo apt install gum
 ```
 
+### [textfox](https://github.com/adriankarlen/textfox)
+1. Install
+    - Clone or download zip from github
+    - In Firefox browser go to `about:profiles`
+        - Open root dir in default profile
+    - Move `chrome` and `user.js` from textfox->root
+2. Config
+    - Works best with [sideberry](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) (firefox extension)
+
+
+### Notes:
+1. Config for my laptop is under branch *tsukuyomi*
+2. Other info / documentation can be found at [my blog](https://publish.obsidian.md/porter-blog/Blog/Blog-Home) under Linux MOC
+3. To view set alias's -> `alias`
+    - For these to work update `PATH` in `~/.config/zsh`
+4. Python LSP for nvim -> [Pyright](https://github.com/microsoft/pyright/blob/main/docs/installation.md)
+    - npm is required for install 
+        - `sudo apt install nodejs npm`
+    - Pyright install
+        - `sudo npm install -g pyright`
+5. Audio currently managed through `setaudio` script *(requires gum)* while I learn more about polybar
+
+
 **To do:**
 - Polybar
 	- use nerdfont for application icons for workspaces
     - add bluetooth module
     - dropdown widgets would be nice for wifi, bluetooth, and time -> calendar
         - i believe wifi can be done with networkmanager-dmenu
-    - conditional module display -> tsukiyomi v. amaterasu
-- picom
-    - conditional refresh rate/vsync -> tsukiyomi v. amaterasu
-
 - i3
-  	- auto launch applications to specific workspaces
-		- term -> 1 
-		- firefox -> 2
-		- obsidian -> 3
-		- spotify -> 10
-    - configure suspend - frozen after lid close
+    - Amaterasu suspend is off -> write script to suspend
+    - Tsukuyomi suspend is on -> disable, write script to suspend
 - bluetoothctl or (gnome bluetooth?)
     - research how to use + polybar integration
 - networkmanager-dmenu
     - how do i even install??
     - this should help with the polybar integrations though
-- tmux
-    - Tate - learn managing sessions
-- obsidian nvim
-    - learn syntax to get correct formatted output
-    - create inbox - default location for new notes
-    - add color to bold/italics
-    - organize filetree / implement tagging system for easy telescope searches
-    - templates 
-    - still need to implement way to sync vault to Amaterasu
 - neovim
     - undotree
 
-- system in genearal would be nice if alongside the vault- documents, pictures and music were synced across machines

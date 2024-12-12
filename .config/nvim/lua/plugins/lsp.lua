@@ -89,19 +89,16 @@ return {
                 })
                 require('lspconfig').pyright.setup({
                     on_attach = function(client, bufnr)
-                        -- Set up keymaps and other things after Pyright attaches
+                        -- set up keymaps and other things after Pyright attaches
                         local lsp_zero = require('lsp-zero')
                         lsp_zero.on_attach(client, bufnr)
-
-                        -- Optionally: add any additional keymaps or settings specific to pyright here
-                        -- For example:
-                        -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
+                        -- add any additional keymaps or settings specific to pyright go here
                     end,
                     settings = {
                         python = {
                             analysis = {
-                                -- Example: Configure Pyright settings here
-                                typeCheckingMode = "basic",  -- Or "strict" depending on your needs
+                                -- configure Pyright settings here
+                                typeCheckingMode = "basic",
                             },
                         },
                     },
