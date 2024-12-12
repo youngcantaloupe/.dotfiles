@@ -1,6 +1,8 @@
 # Set dir to store & source file
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
+~/Projects/Bash/banneramaterasu.sh
+
 # Zsh plugins
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"

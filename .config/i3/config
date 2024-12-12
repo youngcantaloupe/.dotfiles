@@ -38,9 +38,22 @@ font pango:MesloLGSMono 8
 
 # Background
 #exec --no-startup-id feh --bg-scale ~/Documents/Pictures/Wallpapers/moon.jpg
+#exec --no-startup-id feh --randomize --bg-fill /home/kakashi/Documents/Pictures/NatureWallpapers 
+#exec --no-startup-id feh --randomize --bg-fill /home/kakashi/Documents/Pictures/AnimeWallpapers --bg-fill /home/kakashi/Documents/Pictures/Wallpapers
+#exec --no-startup-id feh --randomize --bg-fill /home/kakashi/Documents/Pictures/AnimeWallpapers --randomize --bg-fill /home/kakashi/Documents/Pictures/Wallpapers
+
+# variables for monitors (used for polybar)
+#set $mainMonitor HDMI-0
+#set $secondMonitor HDMI-1
+
 
 # Setting resolution and refreshrate for amaterasu
-exec --no-startup-id xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 143.86 --output DP-2 --mode 1920x1080 --rate 239.96 --right-of HDMI-0
+exec --no-startup-id xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 143.86 --output HDMI-1 --mode 1920x1080 --rate 239.96 --right-of HDMI-0
+
+
+# NO SLEEP!!
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
 
 # Remove titles
 default_border pixel 3
@@ -55,6 +68,9 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# floating windows
+for_window [class="feh"] floating enable
+
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 
@@ -68,8 +84,8 @@ bindsym $mod+d exec ~/.config/rofi/launchers/type-1/launcher.sh
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -164,11 +180,11 @@ workspace $ws2 output HDMI-0
 workspace $ws3 output HDMI-0
 workspace $ws4 output HDMI-0
 workspace $ws5 output HDMI-0
-workspace $ws6 output DP-2
-workspace $ws7 output DP-2
-workspace $ws8 output DP-2
-workspace $ws9 output DP-2
-workspace $ws10 output DP-2
+workspace $ws6 output HDMI-1
+workspace $ws7 output HDMI-1
+workspace $ws8 output HDMI-1
+workspace $ws9 output HDMI-1
+workspace $ws10 output HDMI-1
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -228,4 +244,4 @@ bindsym $mod+r mode "resize"
 #}
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id picom  -b --config ~/.config/picom/picom.conf 
+exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
