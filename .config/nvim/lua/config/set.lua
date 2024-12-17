@@ -22,7 +22,7 @@ vim.opt.wrap = false
 
 -- Shows search as you're typing not after
 vim.opt.incsearch = true
-vim.opt.hlsearch = false-- Shows search as you're typing not after
+vim.opt.hlsearch = false -- Shows search as you're typing not after
 vim.opt.incsearch = true
 vim.opt.hlsearch = false
 
@@ -36,7 +36,24 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 8
 
 -- Sync clipboard between OS and Neovim
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 -- Conceallevel for Obsidian interactive keys
 vim.opt.conceallevel = 1
+
+-- Configure Diagnostics
+local signs = { Error = "", Warn = "", Hint = "", Info = "" }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
+vim.diagnostic.config({
+  virtual_text = false,
+  update_in_insert = false,
+  signs = true,
+  underline = true,
+  float = {
+    border = "rounded",
+  },
+})

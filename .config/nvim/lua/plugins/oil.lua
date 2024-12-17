@@ -1,9 +1,9 @@
 return {
-  'stevearc/oil.nvim',
+  "stevearc/oil.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   lazy = false,
   keys = {
-    { "<leader>pv", "<CMD>Oil<CR>" }
+    { "<leader>pv", "<CMD>Oil<CR>" },
   },
   opts = {
     keymaps = {
@@ -26,7 +26,7 @@ return {
     },
     use_default_keymaps = false,
     view_options = {
-      show_hidden = true
-    }
-  }
+      show_hidden = true,
+    },
+  },
 }
