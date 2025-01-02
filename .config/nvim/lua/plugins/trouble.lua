@@ -14,15 +14,15 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
     {
-      "<leader>tt",
+      "<leader>tT",
       "<cmd>Trouble diagnostics toggle<cr>",
       desc = "trouble diagnostics",
     },
-    {
-      "<leader>tT",
-      "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-      desc = "buffer diagnostics",
-    },
+    -- {
+    --   "<leader>tT",
+    --   "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+    --   desc = "buffer diagnostics",
+    -- },
     {
       "<leader>ts",
       "<cmd>Trouble symbols toggle focus=false<cr>",
