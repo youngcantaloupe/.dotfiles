@@ -57,3 +57,7 @@ vim.diagnostic.config({
     border = "rounded",
   },
 })
+
+vim.opt.cmdheight = 1
+vim.opt.lazyredraw = false
+vim.opt.showmode = false

@@ -31,9 +31,12 @@ vim.keymap.set("n", "<space>x", ":.lua<CR>")
 vim.keymap.set("v", "<space>x", ":lua<CR>")
 
 -- Toggle vim diagnostics
-vim.keymap.set("n", "<leader>td", function()
+vim.keymap.set("n", "<leader>tD", function()
   vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text })
 end, { desc = "Enable Diagnostics" })
 
 -- Open diagnostic float
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show Diagnostics" })
+vim.keymap.set("n", "<leader>td", vim.diagnostic.open_float, { desc = "Show Diagnostics" })
+
+-- reopen alpha nvim
+vim.keymap.set("n", "<leader>pa", "<cmd>Alpha<CR>")

@@ -28,7 +28,7 @@ return {
         graphql = { "prettierd", "prettier", stop_after_first = true },
         astro = { "prettier" },
         svelte = { "prettier" },
-        go = { "prettier" },
+        go = { "gofumpt" },
         python = { "black", line_length = 110 },
         cpp = { "clang-format" },
         lua = { "stylua" },

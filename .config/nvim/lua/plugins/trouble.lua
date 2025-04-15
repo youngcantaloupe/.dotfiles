@@ -14,7 +14,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
     {
-      "<leader>tT",
+      "<leader>tt",
       "<cmd>Trouble diagnostics toggle<cr>",
       desc = "trouble diagnostics",
     },

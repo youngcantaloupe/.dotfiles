@@ -1,10 +1,10 @@
 [directory]
-style = "fg:#65bfb1"
+style = "fg:#25be6a"
 format = "[ $path ]($style)"
 truncation_length = 2
 truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "fg:#769ff0"
+style = "fg:#445963"
 format = '[ $symbol $branch ]($style)'
