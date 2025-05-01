@@ -2,9 +2,7 @@
 
 goofy ahhh changes
 
-pretty sure things will break without terminess nerd font - polybar's fallback is still meslo tho
-
-idk teletype inspired theme
+idk mainframe terminal inspired theme
 shit's pretty cool if you ask me
 
 ![tmux-main](https://github.com/user-attachments/assets/32c9c167-754b-4eb3-9d46-7dd53c8bd6cb)
