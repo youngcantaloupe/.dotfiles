@@ -30,8 +30,6 @@ if [[ $# -lt 1 ]]; then
 fi
 
 # ─── Main ────────────────────────────────────────────────────────
-log "Starting backup..."
-
 
 SOURCE_PATH=$(realpath "$1")
 SOURCE_NAME=$(basename "$SOURCE_PATH")
@@ -44,7 +42,13 @@ log "Backing up '$SOURCE_PATH' to '$ARCHIVE_PATH'"
 
 mkdir -p "$DEST_DIR"
 
-tar -czvf "$ARCHIVE_PATH" -C "$(dirname "$SOURCE_PATH")" "$SOURCE_NAME"
+#tar -czvf "$ARCHIVE_PATH" -C "$(dirname "$SOURCE_PATH")" "$SOURCE_NAME"
+
+TOTAL_SIZE=$(du -sb "$SOURCE_PATH" | cut -f1)
+
+tar -cf - -C "$(dirname "$SOURCE_PATH")" "$SOURCE_NAME" \
+    | pv -s "$TOTAL_SIZE" \
+    | gzip > "$ARCHIVE_PATH"
 
 if [[ $? -eq 0 ]]; then
     log "Done."
