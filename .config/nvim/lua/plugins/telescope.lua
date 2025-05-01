@@ -19,6 +19,7 @@ return {
           },
         },
         -- File search keybinds
+        -- :Telescope live_grep search_dirs=.
         vim.keymap.set("n", "<space>ff", builtin.find_files),
         vim.keymap.set("n", "<space>fh", builtin.help_tags),
         vim.keymap.set("n", "<space>fc", function()
@@ -33,11 +34,11 @@ return {
           })
         end),
 
-        vim.keymap.set("n", "<space>fp", function()
-          builtin.find_files({
-            cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy"),
-          })
-        end),
+        -- vim.keymap.set("n", "<space>fp", function()
+        --   builtin.find_files({
+        --     cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy"),
+        --   })
+        -- end),
 
         -- Grep search keybinds
       })

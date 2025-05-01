@@ -15,7 +15,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- Prime's kemap to paste over highlight, sends overwritten highlight to void register
-vim.keymap.set("x", "<leader>p", '"_dp')
+--vim.keymap.set("x", "<leader>p", '"_dp')
 
 -- Prime's keymap to delete to void register
 vim.keymap.set("n", "<leader>d", '"_d')
@@ -40,3 +40,6 @@ vim.keymap.set("n", "<leader>td", vim.diagnostic.open_float, { desc = "Show Diag
 
 -- reopen alpha nvim
 vim.keymap.set("n", "<leader>pa", "<cmd>Alpha<CR>")
+
+-- toggle neo-tree
+vim.keymap.set("n", "<leader>pt", "<Cmd>Neotree toggle<CR>")

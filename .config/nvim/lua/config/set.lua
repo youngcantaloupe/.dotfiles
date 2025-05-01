@@ -18,7 +18,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 -- Disable line wrapping
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 -- Shows search as you're typing not after
 vim.opt.incsearch = true

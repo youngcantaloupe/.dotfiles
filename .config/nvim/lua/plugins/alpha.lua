@@ -33,7 +33,12 @@ return {
     }
     dashboard.section.buttons.val = {
       --dashboard.button("n", "   New file", ":ene <BAR> startinsert <CR>"),
-      dashboard.button("f", "󰮗   Find file", ":cd $HOME | Telescope find_files<CR>"),
+      dashboard.button("f", "󰮗   Find file", ":Telescope find_files<CR>"),
+      dashboard.button(
+        "p",
+        "   Projects",
+        ":lua require('telescope.builtin').find_files({ cwd = vim.fn.expand('~/Projects') })<CR>"
+      ),
       dashboard.button("e", "   File Explorer", ":Oil<CR>"),
       dashboard.button("r", "   Recent", ":Telescope oldfiles<CR>"),
       dashboard.button(

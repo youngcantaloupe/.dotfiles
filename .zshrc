@@ -5,6 +5,7 @@ export PATH="$PATH:/snap/bin"                      # Snap apps
 export PATH="$PATH:$HOME/.local/bin"               # Your custom scripts
 export PATH="$PATH:$HOME/.spicetify"               # Spicetify scripts
 export PATH="$PATH:/usr/local/go/bin"              # Go binaries
+export TERMINAL=kitty
 
 # ─── Remove duplicates ────────────────────────────────────────────────────────
 # Zsh to treat PATH as unique array (thanks zsh)
